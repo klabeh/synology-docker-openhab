@@ -1,0 +1,10 @@
+sitemap default label="Astro"
+{
+    // Sun
+    Frame {
+		Text item=Sunrise_Time       label="Sunrise [%1$tH:%1$tM]" icon="sunrise"
+        Text item=Sunset_Time        label="Sunset [%1$tH:%1$tM]" icon="sunset"
+        Text item=Noon_Time          label="Noon [%1$tH:%1$tM]" icon="sun"
+        Text item=MoonPhase          label="MoonPhase"
+	}
+}

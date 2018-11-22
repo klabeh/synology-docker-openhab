@@ -1,0 +1,3 @@
+/* Astro binding Thing */
+astro:sun:home  [ geolocation="50.0977,8.6711", interval=300 ]
+astro:moon:home [ geolocation="50.0977,8.6711", interval=300 ]

@@ -1,0 +1,4 @@
+DateTime         Sunrise_Time       "Sunrise [%1$tH:%1$tM]"                   { channel="astro:sun:home:rise#start" }
+DateTime         Sunset_Time        "Sunset [%1$tH:%1$tM]"                    { channel="astro:sun:home:set#start" }
+DateTime         Noon_Time          "Noon [%1$tH:%1$tM]"                      { channel="astro:sun:local:noon#start" }
+String           MoonPhase          "MoonPhase"                               { channel="astro:moon:home:phase#name" }
