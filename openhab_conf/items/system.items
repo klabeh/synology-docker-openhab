@@ -1,0 +1,63 @@
+/* System statistics */
+Group System
+
+/* Network information */
+String Network_AdapterName           (System) { channel="systeminfo:computer:openhab:network#networkDisplayName" }
+String Network_Name                  (System) { channel="systeminfo:computer:openhab:network#networkName" }
+//String Network_IP                    (System) { channel="systeminfo:computer:openhab:network#ip" }
+//String Network_Mac                   (System) { channel="systeminfo:computer:openhab:network#mac" }
+Number Network_DataSent              (System) { channel="systeminfo:computer:openhab:network#dataSent" }
+Number Network_DataRecevied          (System) { channel="systeminfo:computer:openhab:network#dataReceived" }
+Number Network_PacketsSent           (System) { channel="systeminfo:computer:openhab:network#packetsSent" }
+Number Network_PacketsRecevied       (System) { channel="systeminfo:computer:openhab:network#packetsReceived" }
+
+/* CPU information */
+String CPU_Name                      (System) { channel="systeminfo:computer:openhab:cpu#name" }
+String CPU_Description               (System) { channel="systeminfo:computer:openhab:cpu#description" }
+Number CPU_Load                      (System) { channel="systeminfo:computer:openhab:cpu#load"} 
+Number CPU_Load1                     (System) { channel="systeminfo:computer:openhab:cpu#load1" }
+Number CPU_Load5                     (System) { channel="systeminfo:computer:openhab:cpu#load5" }
+Number CPU_Load15                    (System) { channel="systeminfo:computer:openhab:cpu#load15" }
+Number CPU_Threads                   (System) { channel="systeminfo:computer:openhab:cpu#threads" }
+Number CPU_Uptime                    (System) { channel="systeminfo:computer:openhab:cpu#uptime" }
+
+/* Drive information */
+String Drive_Name                    (System) { channel="systeminfo:computer:openhab:drive#name" }
+String Drive_Model                   (System) { channel="systeminfo:computer:openhab:drive#model" }
+String Drive_Serial                  (System) { channel="systeminfo:computer:openhab:drive#serial" }
+
+/* Storage information */
+String Storage_Name                  (System) { channel="systeminfo:computer:openhab:storage#name" }
+String Storage_Type                  (System) { channel="systeminfo:computer:openhab:storage#type" }
+String Storage_Description           (System) { channel="systeminfo:computer:openhab:storage#description" }
+Number Storage_Available             (System) { channel="systeminfo:computer:openhab:storage#available" }
+Number Storage_Used                  (System) { channel="systeminfo:computer:openhab:storage#used" }
+Number Storage_Total                 (System) { channel="systeminfo:computer:openhab:storage#total" }
+Number Storage_Available_Percent     (System) { channel="systeminfo:computer:openhab:storage#availablePercent" }
+Number Storage_Used_Percent          (System) { channel="systeminfo:computer:openhab:storage#usedPercent" }
+
+/* Memory information */
+Number Memory_Available              (System) { channel="systeminfo:computer:openhab:memory#available" }
+Number Memory_Used                   (System) { channel="systeminfo:computer:openhab:memory#used" }
+Number Memory_Total                  (System) { channel="systeminfo:computer:openhab:memory#total" }
+Number Memory_Available_Percent      (System) { channel="systeminfo:computer:openhab:memory#availablePercent" }
+Number Memory_Used_Percent           (System) { channel="systeminfo:computer:openhab:memory#usedPercent" }
+
+/* Swap memory information */
+Number Swap_Available                (System) { channel="systeminfo:computer:openhab:swap#available" }
+Number Swap_Used                     (System) { channel="systeminfo:computer:openhab:swap#used" }
+Number Swap_Total                    (System) { channel="systeminfo:computer:openhab:swap#total" }
+Number Swap_Available_Percent        (System) { channel="systeminfo:computer:openhab:swap#availablePercent" }
+Number Swap_Used_Percent             (System) { channel="systeminfo:computer:openhab:swap#usedPercent" }
+
+/* Battery information */
+//String Battery_Name                  (System) { channel="systeminfo:computer:openhab:battery#name" }
+//Number Battery_RemainingCapacity     (System) { channel="systeminfo:computer:openhab:battery#remainingCapacity" }
+//Number Battery_RemainingTime         (System) { channel="systeminfo:computer:openhab:battery#remainingTime" }
+
+/* Process information */
+Number Process_load                  (System) { channel="systeminfo:computer:openhab:process#load" }
+Number Process_used                  (System) { channel="systeminfo:computer:openhab:process#used" }
+//String Process_name                  (System) { channel="systeminfo:computer:openhab:process#name" }
+Number Process_threads               (System) { channel="systeminfo:computer:openhab:process#threads" }
+String Process_path                  (System) { channel="systeminfo:computer:openhab:process#path" }

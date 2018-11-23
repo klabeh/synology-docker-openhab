@@ -1,0 +1,70 @@
+sitemap system label="System"
+{
+    Frame {
+        Text item=CPU_Uptime label="Uptime [JS(duration.js):%s]" icon="time"
+        
+        Text item=CPU_Load label="CPU Load [%.1f%%]" {
+            Text item=CPU_Load   label="Load [%.1f%%]"
+            Text item=CPU_Load1  label="Load avg. 1min [%.1f%%]"
+            Text item=CPU_Load5  label="Load avg. 5min [%.1f%%]"
+            Text item=CPU_Load15 label="Load avg. 15min [%.1f%%]"
+            Text item=CPU_Threads label="Threads [%.1f]"
+        }
+
+        Text item=Memory_Used_Percent label="Memory used [%.1f%%]" {
+            Text item=Memory_Total             label="Memory total [%.1f MB]"
+            Text item=Memory_Available         label="Memory free [%.1f MB]"
+            Text item=Memory_Available_Percent label="Memory free [%.1f%%]"
+            Text item=Memory_Used              label="Memory used [%.1f MB]"
+            Text item=Memory_Used_Percent      label="Memory used [%.1f%%]"
+        }
+
+        Text item=Storage_Used_Percent label="Storage used [%.1f%%]" {
+            Text item=Storage_Total             label="Storage total [%.1f MB]"
+            Text item=Storage_Available         label="Storage free [%.1f MB]"
+            Text item=Storage_Available_Percent label="Storage free [%.1f%%]"
+            Text item=Storage_Used              label="Storage used [%.1f MB]"
+            Text item=Storage_Used_Percent      label="Storage used [%.1f%%]"
+            Text item=Storage_Name              label="Storage name [%s]"
+            Text item=Storage_Description       label="Storage description [%s]"
+            Text item=Storage_Type              label="Storage type [%s]"
+        }
+
+        Text item=Swap_Used_Percent label="Swap used [%.1f%%]" {
+            Text item=Swap_Total             label="Swap total [%.1f MB]"
+            Text item=Swap_Available         label="Swap free [%.1f MB]"
+            Text item=Swap_Available_Percent label="Swap free [%.1f%%]"
+            Text item=Swap_Used              label="Swap used [%.1f MB]"
+            Text item=Swap_Used_Percent      label="Swap used [%.1f%%]"
+        }
+
+        Text item=Network_Name label="Network Name [%s]" {
+            Text item=Network_AdapterName
+            Text item=Network_Name
+            Text item=Network_DataSent
+            Text item=Network_DataRecevied
+            Text item=Network_PacketsSent
+            Text item=Network_PacketsRecevied
+        }
+    }
+
+    Frame label="openHAB" {
+        //Text item=openhabUptimeFormatted label="Openhab Uptime form. [%s]" {
+            //Text item=Process_name label="Name [%s]"
+            Text item=Process_load label="Load avg. [%.1f]"
+            Text item=Process_path label="Path [%s]"
+            Text item=Process_threads label="Threads [%.1f]"
+            Text item=Process_used label="Memory used [%.1f]"
+        //}
+    }
+    
+    //TODO not yet working
+    //Frame label="System Temperatur" {
+        //Text item=System_Temperature_CPU label="System Temperatur [%.1f °C]" {
+            //Frame {
+                //Text item=System_CPUTemp label="Temperature CPU [%.1f °C]"
+                //Text item=System_GPUTemp label="Temperature GPU [%.1f °C]"
+            //}
+        //}
+    //}
+}
