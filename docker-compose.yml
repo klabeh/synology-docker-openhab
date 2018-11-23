@@ -29,8 +29,8 @@ services:
       - "9001:9001"
     volumes:
       - openhab_userdata_log:/log:ro
-      - ./frontail_conf/frontail-theme.css:/usr/lib/node_modules/frontail/lib/web/assets/styles/openhab.css:ro
-      - ./frontail_conf/frontail-preset.json:/preset/openhab.json:ro
-    command: "--ui-highlight --ui-highlight-preset /preset/openhab.json -t openhab /log/openhab.log /log/events.log"
+      - ./frontail_conf/frontail-theme.css:/usr/lib/node_modules/frontail/web/assets/styles/openhab.css:ro
+      - ./frontail_conf/frontail-preset.json:/usr/lib/node_modules/frontail/preset/openhab.json:ro
+    command: "--ui-highlight --ui-highlight-preset /usr/lib/node_modules/frontail//preset/openhab.json -t openhab -l 2000 -n 200 /log/openhab.log /log/events.log"
 volumes:
   openhab_userdata_log:
