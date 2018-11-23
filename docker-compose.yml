@@ -15,7 +15,22 @@ services:
       #- "./openhab_addons:/openhab/addons"
       - "./openhab_conf:/openhab/conf"
       #- "./openhab_userdata:/openhab/userdata"
+      - "openhab_userdata_log:/openhab/userdata/logs"
     environment:
       OPENHAB_HTTP_PORT: "8080"
       OPENHAB_HTTPS_PORT: "8443"
       EXTRA_JAVA_OPTS: "-Duser.timezone=Europe/Berlin"
+  frontail:
+    image: mthenw/frontail
+    container_name: synology_openhab_frontail
+    restart: always
+    network_mode: host
+    ports:
+      - "9001:9001"
+    volumes:
+      - openhab_userdata_log:/log:ro
+      - ./frontail_conf/frontail-theme.css:/usr/lib/node_modules/frontail/lib/web/assets/styles/openhab.css:ro
+      - ./frontail_conf/frontail-preset.json:/preset/openhab.json:ro
+    command: "--ui-highlight --ui-highlight-preset /preset/openhab.json -t openhab /log/openhab.log /log/events.log"
+volumes:
+  openhab_userdata_log:
