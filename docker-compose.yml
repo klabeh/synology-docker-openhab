@@ -2,7 +2,7 @@ version: '2.2'
 
 services:
   openhab:
-    image: "openhab/openhab:2.3.0-amd64-debian"
+    image: "openhab/openhab:2.4.0-amd64-debian"
     container_name: "synology_openhab_openhab"
     restart: always
     network_mode: host
